@@ -1,0 +1,32 @@
+    1
+   212
+  32123
+ 4321234
+ 
+ #include <iostream> 
+using namespace std;
+int main(){
+  int n;
+  cin >> n;
+  
+  for(int row = 1; row <= n; row++){
+    int val = row;
+    for(int space = 1; space <= n-row; space++)
+      cout << " ";
+    
+    int tempVal = 0;
+    for(int col = 1; col <= 2*row-1; col++){
+      if(col <= row){
+        tempVal = val;
+        cout << val--;
+      }
+      else{
+        cout << ++tempVal;
+      }
+     
+    }
+    cout << endl;
+   
+  }
+  return 0;
+}
